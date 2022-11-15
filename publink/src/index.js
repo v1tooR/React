@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {router} from './App'; // define router como App
+import {router} from './App'; // chamando a constante router 
 import reportWebVitals from './reportWebVitals';
 
 import { RouterProvider } from 'react-router-dom' // puxa as funções da biblioteca router-dom

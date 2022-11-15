@@ -27,7 +27,7 @@ export{ router };
 /*function Aluno({nome, curso}){ // a propriedade nome é colocado dentro dos parâmetros
   return(
     <div>
-      <h2>Bem vindo {nome}</h2>
+      <h2 nome="Victor">Bem vindo {nome}</h2>
       <h3>Curso atual: {curso}</h3>
       <br/>
     </div>

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+.logo{
+    margin-top: 44px;
+    margin-bottom: 20px;
+    color: white;
+
+    font-size: 70px;
+}
+
+.logo-text{
+    background: linear-gradient(rgb(194, 13, 13), rgb(117, 8, 8));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
