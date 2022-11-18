@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import {router} from './App'; // chamando a constante router 
 import reportWebVitals from './reportWebVitals';
-
+import 'react-toastify/dist/ReactToastify.css';
 import { RouterProvider } from 'react-router-dom' // puxa as funções da biblioteca router-dom
+import {ToastContainer} from 'react-toastify'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( // renderiza o componente a partir das tags
   <React.StrictMode>
+    <ToastContainer autoClose={2000}></ToastContainer>
     <RouterProvider router={ router }/> 
   </React.StrictMode> // renderiza toda a rota configurada dentro do App.js
 );

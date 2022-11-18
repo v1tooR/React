@@ -2,13 +2,15 @@
 import "./login.css"
 import { Logo } from "../../components/logo"
 import { useState } from "react"
-
-import { auth } from "../../services/firebase";
+import { toast } from 'react-toastify'
+import { auth } from "../../services/firebaseConnection";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 export default function Login(){// componente basico
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     function handleLogin(e){
         e.preventDefault();
@@ -17,15 +19,14 @@ export default function Login(){// componente basico
             alert("Preencha todos os campos")
             return;
         }
-
-        /*console.log(email);
-        console.log(password);*/
         
         signInWithEmailAndPassword(auth, email, password)
         .then(() => {
-            console.log("Usuario encontrado!")
+            toast.success("Bem vindo!")
+            navigate("/admin", {replace:true})
         })
         .catch(() => {
+            toast.error("Erro ao fazer o login")
             console.log("Usuario não encontrado!")
         })
     }

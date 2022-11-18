@@ -10,7 +10,7 @@ export default function Home(){// componente básico
                 Veja meus links 👇
             </span>
 
-
+    
         <main className='links'>
 
             <section className='link-area'>
